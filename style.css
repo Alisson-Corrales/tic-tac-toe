@@ -1,0 +1,49 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background: url("image/woodBg.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    color: rgb(253, 236, 214);
+    text-align: center;
+}
+
+
+/*tic tac toe boxes*/
+.boxes{
+    display: grid;
+    grid-template-columns: 190px 190px 190px;
+    grid-template-rows: 190px 190px 190px;
+    padding: 10px;
+    background-color: rgb(63, 37, 27);
+    border: 3px solid rgb(63, 37, 27);
+    grid-gap: 10px;
+}
+
+.boxes div{
+    background-color: burlywood;
+    padding: 10px 0;
+    font-size: 1000px;
+    color: black;
+}
+
+.startOver{
+    display: grid;
+    width: 75px;
+    border-radius: 50%;
+    outline: none;
+    justify-self: center;
+    background-color: rgb(253, 236, 214);
+}
+
+.{
+    border-radius: 100%;
+}

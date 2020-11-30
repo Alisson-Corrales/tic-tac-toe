@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tic Tac Toe</title>
+    <meta name="author" content="Alisson C.">
+    <meta name="description" content="play tic tac toe. play it.">
+
+    <meta property="og:image" content="image.png">
+    <meta property="og:title" content="insert title">
+    <meta property="og:description" content="insert description of linked web">
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tic Tac Toe</h1>
+        <h3 id="playerTurn">Player: </h3>
+        <h3>Turn: 0</h3>
+    </header>
+
+    <section class="ticTacToeChart">
+        <div class="boxes">
+            <div onclick='playerChoice()' class="box 1"></div>
+            <div onclick='playerChoice()' class="box 2"></div>
+            <div onclick='playerChoice()' class="box 3"></div>
+            <div onclick='playerChoice()' class="box 4"></div>
+            <div onclick='playerChoice()' class="box 5"></div>
+            <div onclick='playerChoice()' class="box 6"></div>
+            <div onclick='playerChoice()' class="box 7"></div>
+            <div onclick='playerChoice()' class="box 8"></div>
+            <div onclick='playerChoice()' class="box 9"></div>
+        </div>
+    </section>
+
+    <footer>
+        <h2>wins</h2>
+        <div id="playerX">Player X wins - 0</div>
+        <div id="playerO">Player O wins - 0</div>
+    </footer>
+
+    <button id="redo" class="startOver">reset?</button>
+
+    <script href="script.js"></script>
+</body>
+
+</html>
