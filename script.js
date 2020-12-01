@@ -1,7 +1,6 @@
 "use strict";
 
-
-let player = '';
+let player = 'X';
 let turns = 0;
 let playerX = 0;
 let playerO = 0;
@@ -16,33 +15,42 @@ function playerWins() {
 
 }
 
-//when the player clicks one of the boxes, this changes turns
+//changes the player's turn from X to O and vice versa
 function playerTurns() {
-    for (let boxes = 0; boxes > ) {
-
+    for (let turn = 0; turn > turn.length; turn++) {
+        if ("click", playerChoice) {
+            document.getElementById('redo').textContent = "X"
+            player = 'O';
+        } else {
+            document.getElementById('redo').textContent = "O"
+            player = 'X';
+        }
     }
 }
 
-//when the player clicks one of the boxes, this marks the box down
-let playerChoice = function () {
-    let elemlist = document.getElementsByClassName(ticTacToeChart);
-    for(let )
-    if (playerTurns == 'X') {
-        document.getElementById().textContent = "X"
+//when the player clicks one of the boxes, this marks the box down with the respective symbol
+function playerChoice(num) {
+
+    if (player == 'X') {
+        document.getElementById(num).textContent = "X";
+        player = "O";
+    } else {
+        document.getElementById(num).textContent = "O";
+        player = "X";
     }
-    if (playerTurns == 'O') {
-        document.getElementById().textContent = "O"
-    }
-    return
 }
+
 
 //resets game
 function resetGame() {
-    let player = '';
-    let turns = 0;
-    let playerX = 0;
-    let playerO = 0;
-
+    player = '';
+    turns = 0;
+    playerX = 0;
+    playerO = 0;
     let elemList = document.getElementsByClassName("startover");
-    for (let)
+    for (let box = 0; box > box.split; box++) {
+
+    }
+
+    return
 }

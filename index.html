@@ -19,21 +19,21 @@
 <body>
     <header>
         <h1>Tic Tac Toe</h1>
-        <h3 id="playerTurn">Player: </h3>
-        <h3>Turn: 0</h3>
+        <h3 id="playerTurn">Player: X</h3>
+        <h3 id="numberOfTurns">Turn: 0</h3>
     </header>
 
     <section class="ticTacToeChart">
         <div class="boxes">
-            <div onclick='playerChoice()' class="box 1"></div>
-            <div onclick='playerChoice()' class="box 2"></div>
-            <div onclick='playerChoice()' class="box 3"></div>
-            <div onclick='playerChoice()' class="box 4"></div>
-            <div onclick='playerChoice()' class="box 5"></div>
-            <div onclick='playerChoice()' class="box 6"></div>
-            <div onclick='playerChoice()' class="box 7"></div>
-            <div onclick='playerChoice()' class="box 8"></div>
-            <div onclick='playerChoice()' class="box 9"></div>
+            <div onclick='playerChoice("box1")' id="box1" class="choice1"></div>
+            <div onclick='playerChoice("box2")' id="box2" class="choice2"></div>
+            <div onclick='playerChoice("box3")' id="box3" class="choice3"></div>
+            <div onclick='playerChoice("box4")' id="box4" class="choice4"></div>
+            <div onclick='playerChoice("box5")' id="box5" class="choice5"></div>
+            <div onclick='playerChoice("box6")' id="box6" class="choice6"></div>
+            <div onclick='playerChoice("box7")' id="box7" class="choice7"></div>
+            <div onclick='playerChoice("box8")' id="box8" class="choice8"></div>
+            <div onclick='playerChoice("box9")' id="box9" class="choice9"></div>
         </div>
     </section>
 
@@ -43,9 +43,9 @@
         <div id="playerO">Player O wins - 0</div>
     </footer>
 
-    <button id="redo" class="startOver">reset?</button>
+    <button onclick="resetGame()" id="redo" class="startOver">reset?</button>
 
-    <script href="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

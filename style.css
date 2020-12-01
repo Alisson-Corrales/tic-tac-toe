@@ -12,7 +12,7 @@ body{
     display: grid;
     align-content: center;
     justify-content: center;
-    color: rgb(253, 236, 214);
+    color: rgb(247, 224, 151);
     text-align: center;
 }
 
@@ -23,15 +23,15 @@ body{
     grid-template-columns: 190px 190px 190px;
     grid-template-rows: 190px 190px 190px;
     padding: 10px;
-    background-color: rgb(63, 37, 27);
-    border: 3px solid rgb(63, 37, 27);
+    background-color: rgb(68, 32, 27);
+    border: 3px solid rgb(68, 32, 27);
     grid-gap: 10px;
 }
 
 .boxes div{
-    background-color: burlywood;
+    background-color: rgb(247, 224, 151);
     padding: 10px 0;
-    font-size: 1000px;
+    font-size: 100px;
     color: black;
 }
 
@@ -41,9 +41,5 @@ body{
     border-radius: 50%;
     outline: none;
     justify-self: center;
-    background-color: rgb(253, 236, 214);
-}
-
-.{
-    border-radius: 100%;
+    background-color: rgb(247, 224, 151);
 }
