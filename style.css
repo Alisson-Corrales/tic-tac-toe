@@ -6,35 +6,37 @@
 
 body{
     min-height: 100vh;
-    background: url("image/tablebg.jpg");
-    background-repeat: repeat;
+    background: url("image/tableBG.jpg");
+    /*Photo by Element5 Digital from Pexels*/
     background-size: cover;
     display: grid;
     align-content: center;
     justify-content: center;
-    color: rgb(191, 241, 158);
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
     text-align: center;
     padding: 20px;
     gap: 10px;
 }
 
-
 /*tic tac toe boxes*/
 .boxes{
     display: grid;
-    grid-template-columns: 190px 190px 190px;
-    grid-template-rows: 190px 190px 190px;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
     padding: 10px;
-    background-color: rgb(48, 17, 13);
-    border: 3px solid rgb(48, 17, 13);
+    background-color: rgb(48, 26, 13);
+    border: 3px solid rgb(48, 26, 13);
     grid-gap: 10px;
 }
 
 .boxes div{
-    background-color: rgb(208, 236, 176);
-    padding: 10px 0;
-    font-size: 100px;
+    background-color: rgb(198, 250, 215);
+    padding: 32px;
+    font-size: 115px;
     color: black;
+
 }
 
 .startOver{
@@ -43,5 +45,5 @@ body{
     border-radius: 50%;
     outline: none;
     justify-self: center;
-    background-color: rgb(191, 241, 158);
+    background-color: rgb(198, 250, 215);
 }

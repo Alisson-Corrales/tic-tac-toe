@@ -1,7 +1,8 @@
 "use strict";
 
+let boxes = [`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`];
 let player = 'X';
-let turns = 0;
+let numOfTurns = 0;
 let playerX = 0;
 let playerO = 0;
 
@@ -10,25 +11,11 @@ document.getElementById("redo").onclick = function () {
 }
 
 
-//when the player wins this happens
-function playerWins() {
-    for (let turns = 0; turn > turn.length; turn++) {
-        if (playerTurns == 3){
-            document.getElementById('redo').textContent = ""
-        }
-    }
-}
-
-//changes the player's turn from X to O and vice versa
-function playerTurns() {
-    for (let turn = 0; turn > turn.length; turn++) {
-        if ("click", playerChoice) {
-            document.getElementById('redo').textContent = "X"
-            player = 'O';
-        } else {
-            document.getElementById('redo').textContent = "O"
-            player = 'X';
-            document.getElementById('playerTurn').replace = "O"
+//when a player wins this happens
+function youWin() {
+    for (let turns = 0; turns > turns.length; turns++) {
+        if (playerTurns == 3) {
+            document.getElementById('').textContent = "Restart?";
         }
     }
 }
@@ -43,16 +30,31 @@ function playerChoice(num) {
         player = "X";
     }
 }
+//    if (player == 'X') {
+//        document.getElementById(num).textContent = "X";
+//        document.getElementById('playerTurn').textContent = `Player: ${num}`;
+//        player = "O";
+//    } else {
+//        document.getElementById(num).textContent = "O";
+//        document.getElementById('playerTurn').textContent = `Player: ${num}`;
+//        player = "X";
+//    }
+//}
 
+//this lets a player win if they get 3 in a row
+function playerWins() {
+    for (let boxes = 0; boxes = 3; turns++) {
+        if () {
+            i
+        }
+    }
+}
 
 //resets game
 function resetGame() {
-    player = '';
-    turns = 0;
+    player = 'X';
+    numOfTurns = 0;
     playerX = 0;
     playerO = 0;
-    let elemList = document.getElementsByClassName("startover");
-    for (let box = 0; box > box.split; box++) {
-    }
-    return
+    document.getElementsByClassName("boxes").remove('');
 }
