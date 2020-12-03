@@ -12,7 +12,11 @@ document.getElementById("redo").onclick = function () {
 
 //when the player wins this happens
 function playerWins() {
+    for (let turns = 0; turn > turn.length; turn++) {
+        if (playerTurns == 3){
 
+        }
+    }
 }
 
 //changes the player's turn from X to O and vice versa
@@ -24,13 +28,13 @@ function playerTurns() {
         } else {
             document.getElementById('redo').textContent = "O"
             player = 'X';
+            document.getElementById('playerTurn').replace = "O"
         }
     }
 }
 
 //when the player clicks one of the boxes, this marks the box down with the respective symbol
 function playerChoice(num) {
-
     if (player == 'X') {
         document.getElementById(num).textContent = "X";
         player = "O";
@@ -49,8 +53,6 @@ function resetGame() {
     playerO = 0;
     let elemList = document.getElementsByClassName("startover");
     for (let box = 0; box > box.split; box++) {
-
     }
-
     return
 }
