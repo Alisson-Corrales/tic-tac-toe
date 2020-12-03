@@ -14,7 +14,7 @@ document.getElementById("redo").onclick = function () {
 function playerWins() {
     for (let turns = 0; turn > turn.length; turn++) {
         if (playerTurns == 3){
-
+            document.getElementById('redo').textContent = ""
         }
     }
 }
