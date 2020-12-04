@@ -40,7 +40,7 @@ function playerChoice(num) {
 function playerWins() {
     //boxes = ['0', `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`]; for reference
     
-    if('1' && '2' && '3' == "X"){
+    if('1'& '2'& '3' == "X"){
         alert("You win!");
         document.getElementById('redo').textContent = "Restart?";
         resetGame();
