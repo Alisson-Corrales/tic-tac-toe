@@ -1,6 +1,6 @@
 "use strict";
 
-let boxes = ['0', `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`];
+let boxes = [`0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`];
 let player = 'X';
 let numOfTurns = 0;
 let playerX = 0;
@@ -17,7 +17,7 @@ function playerChoice(num) {
     numOfTurns++;
     if (player == 'X') {
         document.getElementById(num).textContent = "X";
-        document.getElementById('playerTurn').textContent = "Player: X";
+        document.getElementById('playerTurn').textContent = "Next Player: X";
         document.getElementById('numOfTurns').textContent = `Turn: ${numOfTurns}`;
         player = "O";
         num = num.split("");
@@ -26,7 +26,7 @@ function playerChoice(num) {
         console.log(boxes);
     } else {
         document.getElementById(num).textContent = "O";
-        document.getElementById('playerTurn').textContent = "Player: O";
+        document.getElementById('playerTurn').textContent = "Next Player: O";
         document.getElementById('numOfTurns').textContent = `Turn: ${numOfTurns}`;
         player = "X";
         num = num.split("");
@@ -40,12 +40,25 @@ function playerChoice(num) {
 function playerWins() {
     //boxes = ['0', `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`]; for reference
     
-    if('1' && '2' && '3' == "X"){
-        alert("You win!");
-        document.getElementById('redo').textContent = "Restart?";
-        resetGame();
-    }return
+    //makes points go up by depending who wins
+    playerX++;
+    playerY++;
     
+    if (boxes[1] == 'X' && boxes[2] == 'X' && boxes[3] == 'X') {
+        console.log('you win!');
+        document.getElementById('redo').textContent = "Restart?";
+        document.getElementById('playerX').textContent = `Player X wins - ${playerX}`;
+    }
+    if (boxes[4] == 'X' && boxes[5] == 'X' && boxes[6] == 'X') {
+        console.log('you win!');
+        document.getElementById('redo').textContent = "Restart?";
+        document.getElementById('playerX').textContent = `Player X wins - ${playerX}`;
+    }
+    if (boxes[7] == 'X' && boxes[8] == 'X' && boxes[9] == 'X') {
+        console.log('you win!');
+        document.getElementById('redo').textContent = "Restart?";
+        document.getElementById('playerX').textContent = `Player X wins - ${playerX}`;
+    }
 }
 
 //resets game
@@ -54,5 +67,5 @@ function resetGame() {
     numOfTurns = 0;
     playerX = 0;
     playerO = 0;
-    document.getElementsByClassName("boxes").remove('');
+    boxes = [`0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`];
 }

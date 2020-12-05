@@ -25,8 +25,8 @@ body{
 /*tic tac toe boxes*/
 .boxes{
     display: grid;
-    grid-template-columns: 200px 200px 200px;
-    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: 165px 165px 165px;
+    grid-template-rows: 165px 165px 165px;
     padding: 10px;
     background-color: rgb(48, 13, 13);
     border: 3px solid rgb(48, 13, 13);
@@ -35,8 +35,8 @@ body{
 
 .boxes div{
     background-color: rgb(214, 231, 253);
-    padding: 32px;
-    font-size: 115px;
+    padding: 25px;
+    font-size: 95px;
     color: rgb(33, 142, 243);
 
 }
