@@ -19,12 +19,13 @@
 <body>
     <header>
         <h1>Tic Tac Toe</h1>
-        <h3 id="playerTurn">Next Player: O</h3>
-        <h3 id="numOfTurns">Turn: 0</h3>
+        <h3 id="playerTurn">Player Turn: X</h3>
+        <h3 id="numOfTurns">Total Turns: 0</h3>
+        <h1 id="winner"></h1>
     </header>
 
     <section class="ticTacToeChart">
-        <div class="boxes">
+        <div class="boxes" id="boxes">
             <div onclick='playerChoice("box1")' id="box1" class="choice 1"></div>
             <div onclick='playerChoice("box2")' id="box2" class="choice 2"></div>
             <div onclick='playerChoice("box3")' id="box3" class="choice 3"></div>

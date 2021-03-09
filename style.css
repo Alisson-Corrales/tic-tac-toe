@@ -38,15 +38,22 @@ body{
     padding: 25px;
     font-size: 95px;
     color: rgb(33, 142, 243);
-
+    cursor: pointer;
 }
 
 .startOver{
     display: grid;
     width: 75px;
-    border-radius: 50%;
+    border-radius: 50% ;
+    border: solid 10px rgb(33, 142, 243);
     outline: none;
     justify-self: center;
     color: whitesmoke;
     background-color: rgb(33, 142, 243);
+    transition: 2s;
+    cursor: pointer;
+}
+.startOver:hover {
+    background-color: rgb(12, 76, 136);
+    border: solid 10px rgb(12, 76, 136);
 }

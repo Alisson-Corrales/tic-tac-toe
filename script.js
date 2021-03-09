@@ -5,7 +5,11 @@ let player = 'X';
 let numOfTurns = 0;
 let playerX = 0;
 let playerO = 0;
+let playingBoard = document.getElementById('boxes');
+let winner = document.getElementById('winner');
 
+
+//resets the game
 document.getElementById("redo").onclick = function () {
     resetGame();
 }
@@ -17,7 +21,7 @@ function playerChoice(num) {
     numOfTurns++;
     if (player == 'X') {
         document.getElementById(num).textContent = "X";
-        document.getElementById('playerTurn').textContent = "Next Player: X";
+        document.getElementById('playerTurn').textContent = "Player Turn: O";
         document.getElementById('numOfTurns').textContent = `Turn: ${numOfTurns}`;
         player = "O";
         num = num.split("");
@@ -26,7 +30,7 @@ function playerChoice(num) {
         console.log(boxes);
     } else {
         document.getElementById(num).textContent = "O";
-        document.getElementById('playerTurn').textContent = "Next Player: O";
+        document.getElementById('playerTurn').textContent = "Player Turn: X";
         document.getElementById('numOfTurns').textContent = `Turn: ${numOfTurns}`;
         player = "X";
         num = num.split("");
@@ -38,97 +42,131 @@ function playerChoice(num) {
 
 //this lets a player win if they get 3 boxes w/ the same letter in a row
 function playerWins() {
-    //makes points go up by depending who wins
-    playerX++;
-    playerY++;
 
     //if X player wins
     if (boxes[1] == 'X' && boxes[2] == 'X' && boxes[3] == 'X') {
-        alert('you win!');
+        console.log('Player X wins!')
+        
+        playerX++;
         document.getElementById('redo').textContent = "Restart?";
         document.getElementById('playerX').textContent = `Player X wins - ${playerX}`;
+        winner.textContent = 'Player X wins!!'
     }
     if (boxes[4] == 'X' && boxes[5] == 'X' && boxes[6] == 'X') {
-        alert('you win!');
+        console.log('Player X wins!')
+        playerX++;
         document.getElementById('redo').textContent = "Restart?";
         document.getElementById('playerX').textContent = `Player X wins - ${playerX}`;
+        winner.textContent = 'Player X wins!!'
     }
     if (boxes[7] == 'X' && boxes[8] == 'X' && boxes[9] == 'X') {
-        alert('you win!');
+        console.log('Player X wins!')
+        playerX++;
         document.getElementById('redo').textContent = "Restart?";
         document.getElementById('playerX').textContent = `Player X wins - ${playerX}`;
+        winner.textContent = 'Player X wins!!'
     }
     if (boxes[1] == 'X' && boxes[4] == 'X' && boxes[7] == 'X') {
-        alert('you win!');
+        console.log('Player X wins!')
+        playerX++;
         document.getElementById('redo').textContent = "Restart?";
         document.getElementById('playerX').textContent = `Player X wins - ${playerX}`;
+        winner.textContent = 'Player X wins!!'
     }
     if (boxes[2] == 'X' && boxes[5] == 'X' && boxes[8] == 'X') {
-        alert('you win!');
+        console.log('Player X wins!')
+        playerX++;
         document.getElementById('redo').textContent = "Restart?";
         document.getElementById('playerX').textContent = `Player X wins - ${playerX}`;
+        winner.textContent = 'Player X wins!!'
     }
     if (boxes[3] == 'X' && boxes[6] == 'X' && boxes[9] == 'X') {
-        alert('you win!');
+        console.log('Player X wins!')
+        playerX++;
         document.getElementById('redo').textContent = "Restart?";
         document.getElementById('playerX').textContent = `Player X wins - ${playerX}`;
+        winner.textContent = 'Player X wins!!'
     }
     if (boxes[1] == 'X' && boxes[5] == 'X' && boxes[9] == 'X') {
-        alert('you win!');
+        console.log('Player X wins!')
+        playerX++;
         document.getElementById('redo').textContent = "Restart?";
         document.getElementById('playerX').textContent = `Player X wins - ${playerX}`;
+        winner.textContent = 'Player X wins!!'
     }
     if (boxes[3] == 'X' && boxes[5] == 'X' && boxes[7] == 'X') {
-        alert('you win!');
+        console.log('Player X wins!')
+        playerX++;
         document.getElementById('redo').textContent = "Restart?";
         document.getElementById('playerX').textContent = `Player X wins - ${playerX}`;
+        winner.textContent = 'Player X wins!!'
     }
 
     //if O player wins
     if (boxes[1] == 'O' && boxes[2] == 'O' && boxes[3] == 'O') {
-        alert('you win!');
+        console.log('Player Y wins!')
+        playerX++;
         document.getElementById('redo').textContent = "Restart?";
-        document.getElementById('playerX').textContent = `Player X wins - ${playerX}`;
+        document.getElementById('playerX').textContent = `Player Y wins - ${playerY}`;
+        winner.textContent = 'Player O wins!!'
     }
     if (boxes[4] == 'O' && boxes[5] == 'O' && boxes[6] == 'O') {
-        alert('you win!');
+        console.log('Player O wins!')
+        playerO++;
         document.getElementById('redo').textContent = "Restart?";
-        document.getElementById('playerX').textContent = `Player X wins - ${playerX}`;
+        document.getElementById('playerO').textContent = `Player O wins - ${playerO}`;
+        winner.textContent = 'Player O wins!!'
     }
     if (boxes[7] == 'O' && boxes[8] == 'O' && boxes[9] == 'O') {
-        alert('you win!');
+        console.log('Player O wins!')
+        playerO++;
         document.getElementById('redo').textContent = "Restart?";
-        document.getElementById('playerX').textContent = `Player X wins - ${playerX}`;
+        document.getElementById('playerO').textContent = `Player O wins - ${playerO}`;
+        winner.textContent = 'Player O wins!!'
     }
     if (boxes[1] == 'O' && boxes[4] == 'O' && boxes[7] == 'O') {
-        alert('you win!');
+        console.log('Player O wins!')
+        playerO++;
         document.getElementById('redo').textContent = "Restart?";
-        document.getElementById('playerX').textContent = `Player X wins - ${playerX}`;
+        document.getElementById('playerO').textContent = `Player O wins - ${playerO}`;
+        winner.textContent = 'Player O wins!!'
     }
     if (boxes[2] == 'O' && boxes[5] == 'O' && boxes[8] == 'O') {
-        alert('you win!');
+        console.log('Player O wins!')
+        playerO++;
         document.getElementById('redo').textContent = "Restart?";
-        document.getElementById('playerX').textContent = `Player X wins - ${playerX}`;
+        document.getElementById('playerO').textContent = `Player O wins - ${playerO}`;
+        winner.textContent = 'Player O wins!!'
     }
     if (boxes[3] == 'O' && boxes[6] == 'O' && boxes[9] == 'O') {
-        alert('you win!');
+        console.log('Player O wins!')
+        playerO++;
         document.getElementById('redo').textContent = "Restart?";
-        document.getElementById('playerX').textContent = `Player X wins - ${playerX}`;
+        document.getElementById('playerO').textContent = `Player O wins - ${playerO}`;
+        winner.textContent = 'Player O wins!!'
     }
     if (boxes[1] == 'O' && boxes[5] == 'O' && boxes[9] == 'O') {
-        alert('you win!');
+        console.log('Player O wins!')
+        playerO++;
         document.getElementById('redo').textContent = "Restart?";
-        document.getElementById('playerX').textContent = `Player X wins - ${playerX}`;
+        document.getElementById('playerO').textContent = `Player O wins - ${playerO}`;
+        winner.textContent = 'Player O wins!!'
     }
     if (boxes[3] == 'O' && boxes[5] == 'O' && boxes[7] == 'O') {
-        alert('you win!');
+        console.log('Player O wins!')
+        playerO++;
         document.getElementById('redo').textContent = "Restart?";
-        document.getElementById('playerX').textContent = `Player X wins - ${playerX}`;
+        document.getElementById('playerO').textContent = `Player O wins - ${playerO}`;
+        winner.textContent = 'Player O wins!!'
     }
 }
 
-//resets game
+playingBoard.addEventListener('click', playerWins);
+
+
+//resets game as though the page was refreshed
 function resetGame() {
     player = 'X';
     numOfTurns = 0;
+    //boxes[1].textContent = ('');
 }
